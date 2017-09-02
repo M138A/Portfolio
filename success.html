@@ -49,71 +49,45 @@
             <li><a href="index.html">HOME</a></li>
             <li ><a href="about.html">ABOUT</a></li>
 			<li ><a href="cv.html">CV</a></li>
-            <li><a href="contact.html">CONTACT</a></li>            
+            <li class="active"><a href="contact.html">CONTACT</a></li>            
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </div>
-
-
 	<!-- *****************************************************************************************************************
 	 BLUE WRAP
 	 ***************************************************************************************************************** -->
 	<div id="blue">
 	    <div class="container">
 			<div class="row">
-				<h3>TamTam Office Automation</h3>
+				<h3>Contact.</h3>
 			</div><!-- /row -->
 	    </div> <!-- /container -->
 	</div><!-- /blue -->
 
 	<!-- *****************************************************************************************************************
-	 TITLE & CONTENT
+	 CONTACT WRAP
 	 ***************************************************************************************************************** -->
 
-	 <div class="container mt">
+	 <div id="contactwrap"></div>
+	 
+	<!-- *****************************************************************************************************************
+	 CONTACT FORMS
+	 ***************************************************************************************************************** -->
+
+	 <div class="container mtb">
 	 	<div class="row">
-		 	<div class="col-lg-10 col-lg-offset-1 centered">
-			 	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-				  <!-- Indicators -->
-				  <ol class="carousel-indicators">
-				    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-				    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-				    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-				  </ol>
-				
-				  <!-- Wrapper for slides -->
-				<div class="carousel-inner">
-				    <div class="item active">
-				      <img src="assets/img/portfolio/TamTam.png" style="min-height:25%;" alt="">
-				    </div>
-				   
-				  </div>
-				</div><! --/Carousel -->
-		 	</div>
-		 	
-		 	<div class="col-lg-5 col-lg-offset-1">
-			 	<div class="spacing"></div>
-		 
-		 		<p>Dit project werk ik nu aan.</p>
-				<p>In dit project gaan we een systeem maken waarmee we het kantoor van TamTam verbeteren.</p>
-				<p>Details volgen zodra er meer bekend is.</p>
-		 	</div>
-		 	
-		 	<div class="col-lg-4 col-lg-offset-1">
-			 	<div class="spacing"></div>
-		 		<h4>Project Details</h4>
-		 		<div class="hline"></div>		 		
-		 		<p><b>Categories:</b> Prototyping, Arduino, Office</p>
-		 		<p><b>Tagged:</b> Office automation</p>
-		 		<p><b>Client:</b> TamTam</p>
-		 		
-		 	</div>
-		 	
+	 		<!--<div class="col-lg-8">-->
+	 			<h4>Gelukt!</h4>
+	 			<div class="hline"></div>
+		 			<p>Het formulier is succesvol verzonden.</p>
+					<p>Ik streef ernaar om binnen 24 uur te reageren.</p>
+					
+	 		
 	 	</div><! --/row -->
 	 </div><! --/container -->
-	 
-	
+
+
 	<!-- *****************************************************************************************************************
 	 FOOTER
 	 ***************************************************************************************************************** -->
@@ -136,6 +110,7 @@
 		 	</div><! --/row -->
 	 	</div><! --/container -->
 	 </div><! --/footerwrap -->
+	 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -149,87 +124,5 @@
   	<script src="assets/js/custom.js"></script>
 
 
-    <script>
-// Portfolio
-(function($) {
-	"use strict";
-	var $container = $('.portfolio'),
-		$items = $container.find('.portfolio-item'),
-		portfolioLayout = 'fitRows';
-		
-		if( $container.hasClass('portfolio-centered') ) {
-			portfolioLayout = 'masonry';
-		}
-				
-		$container.isotope({
-			filter: '*',
-			animationEngine: 'best-available',
-			layoutMode: portfolioLayout,
-			animationOptions: {
-			duration: 750,
-			easing: 'linear',
-			queue: false
-		},
-		masonry: {
-		}
-		}, refreshWaypoints());
-		
-		function refreshWaypoints() {
-			setTimeout(function() {
-			}, 1000);   
-		}
-				
-		$('nav.portfolio-filter ul a').on('click', function() {
-				var selector = $(this).attr('data-filter');
-				$container.isotope({ filter: selector }, refreshWaypoints());
-				$('nav.portfolio-filter ul a').removeClass('active');
-				$(this).addClass('active');
-				return false;
-		});
-		
-		function getColumnNumber() { 
-			var winWidth = $(window).width(), 
-			columnNumber = 1;
-		
-			if (winWidth > 1200) {
-				columnNumber = 5;
-			} else if (winWidth > 950) {
-				columnNumber = 4;
-			} else if (winWidth > 600) {
-				columnNumber = 3;
-			} else if (winWidth > 400) {
-				columnNumber = 2;
-			} else if (winWidth > 250) {
-				columnNumber = 1;
-			}
-				return columnNumber;
-			}       
-			
-			function setColumns() {
-				var winWidth = $(window).width(), 
-				columnNumber = getColumnNumber(), 
-				itemWidth = Math.floor(winWidth / columnNumber);
-				
-				$container.find('.portfolio-item').each(function() { 
-					$(this).css( { 
-					width : itemWidth + 'px' 
-				});
-			});
-		}
-		
-		function setPortfolio() { 
-			setColumns();
-			$container.isotope('reLayout');
-		}
-			
-		$container.imagesLoaded(function () { 
-			setPortfolio();
-		});
-		
-		$(window).on('resize', function () { 
-		setPortfolio();          
-	});
-})(jQuery);
-</script>
   </body>
 </html>

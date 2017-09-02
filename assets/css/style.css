@@ -459,3 +459,65 @@ csmall2 {
 	padding-right: 15px;
 	font-size: 18px;
 }
+
+.cvHeader {
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.sectionWrapper {
+	margin-left:20%;
+	max-width: 54%;
+}
+
+.section {
+	height: auto;
+    width: 80%;
+    padding: 0 0 30px 0;
+    border-top: 1px solid #00B3FE;
+}
+
+.titlecolumn {
+	float:left;
+	width:50%;
+	border-top: 3px solid #00B3FE;
+	color: #00B3FE;
+}
+
+.contentcolumn {
+	float:left;
+	width:50%;
+}
+.clear {
+	clear:both;
+}
+.cvWrapper {
+	margin-left:20%;
+	max-width: 54%;
+	
+}
+
+.cvitem {
+	margin-bottom:5px;
+}
+
+.buttonWrapper {
+	width:80%;
+}
+
+.downloadcvbutton {
+	margin-bottom:5px;
+	float: right;
+}
+
+@media (max-width:1062px)
+{
+	.titlecolumn{
+		clear:both;
+		width:100%;
+	}
+	.contentcolumn{
+		clear:both;
+		width:100%;
+	}
+}
